@@ -25,12 +25,12 @@ Search REST API
 
 ## TODO
 
-# High priority
+High priority
 * Database migrations (Flyway) — replace manual exec(CREATE TABLE...) in init() with proper Flyway migrations. Handles schema versioning, rollbacks, and production safety.
 * PostgreSQL UUID type — change id column from varchar(36) to native uuid type. Better performance, storage, and type safety.
 * Use separate dto and domain layer
 
-# Medium priority
+Medium priority
 * Test isolation via transaction rollback — currently uses TRUNCATE which is fragile. Proper fix requires making dbQuery use an injectable transaction so tests can wrap in a rollback.
 * Test with ivfflat index — requires inserting ≥100 vectors before creating the index, then running search. Needed to verify production search behavior.
 
