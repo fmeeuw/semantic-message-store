@@ -1,0 +1,18 @@
+meta {
+  name: Semantic Search
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8090/api/search
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "query": "failed payments",
+    "limit": 10
+  }
+}

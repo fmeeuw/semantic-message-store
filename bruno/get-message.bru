@@ -1,0 +1,15 @@
+meta {
+  name: Get Message
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:8090/api/messages/{{messageId}}
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  messageId: 123e4567-e89b-12d3-a456-426614174000
+}

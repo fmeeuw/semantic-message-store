@@ -1,0 +1,17 @@
+meta {
+  name: Store Message
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8090/api/messages
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "content": "Payment of $500 failed due to insufficient funds"
+  }
+}
